@@ -1,7 +1,7 @@
 include <stdio.h>
 int main(){
     printf("Who are you?/n");
-    string name;
+    char name[100];
     scanf("%s", &name);
     printf("Hello, %s!/n", name);
     int coin, count = 0;
@@ -16,4 +16,9 @@ int main(){
             else printf("Round %d: Tails\n", i);
     }
     printf("Heads: %d, Tail: %d\n"count, 3-count);
+
+    if(count >= 2){
+        printf("%s won!\n", name);
+    }
+    return 0;
 }
